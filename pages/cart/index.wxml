@@ -1,0 +1,4 @@
+<view>
+  <searchinput></searchinput>
+  <text>hello</text>
+</view>

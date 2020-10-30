@@ -1,0 +1,33 @@
+.floor_title{
+  width: 100%;
+}
+.floor_home{
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  .floor_product_home{
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    //清除浮动
+    overflow: hidden;
+    .product_data{
+      float: left;
+      width: 33.33%;
+      // 设置后面四个超链接
+      // 第一张图的高度为：33.33vm*386/232
+      &:nth-last-child(-n+4){
+        //后面四张图的高度等于第一张图高度的一半
+        height: 33.33vw * 386 / 464;
+        border-left:1px,solid #fff ;
+      }
+
+      &:nth-child(2),&:nth-child(3){
+        border-bottom: 1px solid #fff;
+      }
+      image{
+        width: 100%;
+        height: 100%;
+      }
+      
+    }
+  }
+}

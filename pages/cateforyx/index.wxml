@@ -1,0 +1,49 @@
+<!--pages/cateforyx/index.wxml-->
+<view class="root">
+<!-- 搜索框 -->
+    <view class="search_home">
+      <searchinput></searchinput>
+    </view>
+
+    <view class="centent">
+        <!-- //左边菜单内容 -->
+        <view class="left_menu">
+            <scroll-view scroll-y="true" style="height:calc(100vh)">
+                    <view  wx:for="{{leftCateList}}" wx:key="*this"  class="menu_item {{index===selOptions?'active' : ''}}"  bindtap="onItemClick" data-index="{{index}}" >
+                        {{item}}
+                    </view>
+            </scroll-view>
+        </view>ls
+        <!-- //右边商品分类 -->
+        <view class="right_centent">
+            <scroll-view scroll-y="true" style="height:calc(100vh)" class="centent">
+                <view 
+                  wx:for="{{rightItemList}}"
+                    wx:for-item="item1"
+                    wx:for-index="index1"
+                    wx:key="cat_id">
+                       <!-- 获取 分类小标题 -->
+                   
+                    <view class="right_itme" >
+                        <text >/</text>
+                        <text >{{item1.cat_name}}</text>
+                        <text >/</text>
+                    </view>
+                    <!-- 获取分类小标题下面的内容 -->
+                    <view class="right_item_centent">
+                        <navigator   wx:for="{{item1.children}}"
+                        wx:for-item="item2"
+                        wx:for-index="index2"
+                        wx:key="cat_id">
+                        <image class="right_item_centent_image" mode="widthFix" src="{{item2.cat_icon}}"></image>
+                        <text >{{item2.cat_name}}</text>
+                        </navigator>
+                        
+                    </view>
+                    
+                    </view>
+             
+            </scroll-view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,59 @@
+.root{
+    height: 100%; 
+    .centent{
+        height: ~'calc(100vh-90rpx)';
+        display: flex;
+        .left_menu{
+            height: 100%;
+            
+            flex: 2;
+            .menu_item{
+                height: 80rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30rpx;
+            }
+        }
+        .active{
+            color: var(--themeColor);  
+            border-left: 5rpx solid currentColor;  
+            
+        }
+      
+        .right_centent{
+            height: 100%;
+            flex: 6;
+            .right_itme{
+                height: 80rpx;
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+            .right_item_centent{
+                width: 100%;
+                display: flex;
+                    // 换行
+                flex-wrap: wrap; 
+                navigator{
+                    width: 33.33%;
+                    text-align: center;
+                    .right_item_centent_image{
+                        display: block;
+                        width: 50%;
+                        margin: auto;
+                    }
+                    text{
+                        display: block;
+                    }
+                }
+               
+            }  
+                      
+         
+           
+        }
+    }
+}
+
