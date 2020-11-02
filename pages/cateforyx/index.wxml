@@ -13,10 +13,10 @@
                         {{item}}
                     </view>
             </scroll-view>
-        </view>ls
+        </view>
         <!-- //右边商品分类 -->
         <view class="right_centent">
-            <scroll-view scroll-y="true" style="height:calc(100vh)" class="centent">
+            <scroll-view scroll-top="{{srcollTop}}" scroll-y="true" style="height:calc(100vh)" class="centent">
                 <view 
                   wx:for="{{rightItemList}}"
                     wx:for-item="item1"
@@ -34,7 +34,8 @@
                         <navigator   wx:for="{{item1.children}}"
                         wx:for-item="item2"
                         wx:for-index="index2"
-                        wx:key="cat_id">
+                        wx:key="cat_id"
+                        url="/pages/goods_list/index">
                         <image class="right_item_centent_image" mode="widthFix" src="{{item2.cat_icon}}"></image>
                         <text >{{item2.cat_name}}</text>
                         </navigator>
