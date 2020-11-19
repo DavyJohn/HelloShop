@@ -1,2 +1,42 @@
-<!--pages/goods_list/index.wxml-->
-<text>pages/goods_list/index.wxml</text>
+
+ <view class="root">
+   <!-- //搜索框 -->
+   <view class="search">
+    <searchinput></searchinput>
+   </view>
+   
+   <view class="tabs">
+    <tabs tabs= "{{tabs}}" bindtabsItemChnages="tabsItemChnages" ></tabs>
+    
+    <block wx:if="{{tabs[0].isActive}}">
+      <view class="first_tab">
+        <navigator class="goods_item" 
+        wx:for="{{googsListData}}"
+        wx:key="goods_id">
+        <!-- 左侧图片 -->
+          <view class="goods_item_image">
+            <image mode="widthFix" src="{{item.goods_small_logo}}" />
+          </view>
+          <!-- 右侧内容 -->
+          <view  class="googs_item_right_detail">
+            <view class="goods_detail">{{item.goods_name}}</view>
+            <view class="goods_price">￥{{item.goods_price}}</view>
+          </view>
+          
+        </navigator>
+      </view>
+    </block>
+    <block wx:if="{{tabs[1].isActive}}">
+      <view class="second_tab">
+        <navigator ></navigator>
+      </view>
+    </block>
+    <block wx:if="{{tabs[2].isActive}}">
+      <view class="third_tab">
+        <navigator ></navigator>
+      </view>
+    </block>
+
+   </view>
+ </view>
+ 

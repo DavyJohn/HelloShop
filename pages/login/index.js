@@ -5,7 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+     title1:'申请获取以下权限',
+     title2:'获取您的公开信息（昵称、头像等）',
+     title3:'确认授权'
+  },
+  getUserInfo:function(res){
+    
+    const {userInfo} = res.detail;
+    console.log(userInfo);
+    if(userInfo){
+      console.log("缓存userinfo")
+      wx.setStorageSync('userinfo', {time:Date.now(),data:userInfo})
+    }
   },
 
   /**

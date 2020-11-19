@@ -1,2 +1,21 @@
-<!--pages/login/index.wxml-->
-<text>pages/login/index.wxml</text>
+
+<view class="root flex-sub text-center">
+<!-- //设置头像框 -->
+  <view class="image_view">
+    <image class="cu-avatar xl round " src="https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg" ></image>
+  </view>
+  <!-- //字段一 -->
+  <view class="solid-bottom text-xl padding" >
+    <text class="text-black text-bold">{{title1}}</text>
+  </view>
+  <!-- //字段二 -->
+  <view class="solid-bottom text-xl padding" >
+    <text class="padding">{{title2}}</text>
+  </view>
+  <!-- //授权、登录按钮 -->
+  <view class="padding flex flex-direction" >
+  <button class=" btn_le  cu-btn bg-orange round lg" role="button" open-type="getUserInfo" bindgetuserinfo= 'getUserInfo' >{{title3}}</button>
+  </view>
+</view>
+
+

@@ -1,1 +1,32 @@
-/* pages/login/index.wxss */
+page {
+  background-color: white;
+}
+.root {
+  height: 100%;
+  width: 100%;
+}
+.root .image_view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200rpx;
+}
+.root .image_view image {
+  display: flex;
+}
+.root .solid-bottom text-xl padding {
+  background-color: cyan;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.root .solid-bottom text-xl padding .text-black text-bold {
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+.root .btn_le {
+  display: flex;
+  width: 100%;
+}

@@ -5,8 +5,11 @@ export const request =(params)=>{
      ...params,
      url : baseUrl+params.url,
      success:(result)=>{
-      console.log(params);
-       resolve(result.data.message);
+       if(result.data.meta.status == "200" ){
+          console.log("成功获取数据"),
+          resolve(result.data.message)
+       }
+       
      },
      fail:(err)=>{
        reject(err);
