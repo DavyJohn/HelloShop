@@ -53,10 +53,12 @@ Page({
     const {goods} = res;
     console.log(goods);
     this.setData({
+      //数组的拼接
       googsListData:[...this.data.googsListData,...goods]
       
     })
-    console.log(this.data.googsListData)
+    // 数据加载完毕之后我们可以是的刷新停止
+    wx.stopPullDownRefresh();
   },
 
   tabsItemChnages(e){
@@ -111,17 +113,30 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    console.log("我现在在底部");
-    if(this.QueryParams.pagenum<= this.totalPages){
+    if(this.QueryParams.pagenum< this.totalPages){
       //当前页小于等于总页数，那就开启加载下一页
       this.QueryParams.pagenum++;
       this.getGoodsListData();
     }else{
-
+      wx.showToast({
+        title: '我已经在底部了！😙'
+      });
     }
 
   },
 
+  // 页面刷新操作
+
+onPullDownRefresh:function(){
+  console.log("下载刷新咯"),
+  //清空数组
+  this.data.googsListData=[],
+  //将页码重新置为1
+  this.QueryParams.pagenum=1,
+  //重新获取请求
+  this.getGoodsListData()
+},
+  
   /**
    * 用户点击右上角分享
    */

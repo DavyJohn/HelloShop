@@ -1,2 +1,14 @@
 <!--pages/goos_detail/index.wxml-->
-<text>pages/goos_detail/index.wxml</text>
+<view class="root">
+    <!-- 轮播图 -->
+    <view class="viewSwiper">
+    <swiper class="goodsSwiper" indicator-dots="true" indicator-color="rgba(0,0,0,.3)" autoplay="true">
+      <swiper-item class="goodsItemSwiper" wx:for="{{pics}}"
+      wx:key="pics_id">
+        <navigator class="swiperNavigator" >
+        <image mode="widthFix" class="swiperImage" src="{{item.pics_mid_url}}"> </image>
+        </navigator>
+      </swiper-item>  
+    </swiper>
+    </view>
+</view>

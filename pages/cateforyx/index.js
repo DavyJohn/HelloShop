@@ -28,9 +28,11 @@ Page({
     const cates =wx.getStorageSync('cates');
     console.log(cates);
     if (!cates) {
+      console.log('本来就不存在')
       this.getCates()
     } else {
       if(Date.now() - cates.time>1000*60*60){
+        console.log('过期了')
         this.getCates()
       }else{
         this.Cates = cates.data,

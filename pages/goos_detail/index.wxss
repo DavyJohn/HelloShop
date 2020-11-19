@@ -1,1 +1,10 @@
-/* pages/goos_detail/index.wxss */
+.root .goodsSwiper {
+  height: 70vw;
+  background-color: darkblue;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.root .goodsSwiper .goodsItemSwiper image {
+  width: 70%;
+}

@@ -12,7 +12,8 @@
       <view class="first_tab">
         <navigator class="goods_item" 
         wx:for="{{googsListData}}"
-        wx:key="goods_id">
+        wx:key="goods_id"
+        url="/pages/goos_detail/index?goods_id={{item.goods_id}}&goods_name={{item.goods_name}}">
         <!-- 左侧图片 -->
           <view class="goods_item_image">
             <image mode="widthFix" src="{{item.goods_small_logo}}" />
