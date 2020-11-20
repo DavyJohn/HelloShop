@@ -1,10 +1,49 @@
 .root .goodsSwiper {
-  height: 70vw;
-  background-color: darkblue;
+  height: 60vw;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
 .root .goodsSwiper .goodsItemSwiper image {
   width: 70%;
+}
+.root .goods_price {
+  color: var(--themeColor);
+  font-size: 40rpx;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.root .goods_tips {
+  flex-direction: row;
+  display: flex;
+}
+.root .goods_tips .goods_name {
+  padding: 5rpx 20rpx;
+  flex: 8;
+  border-right: 2rpx solid darkgray;
+}
+.root .goods_tips .goods_collect {
+  display: flex;
+  flex: 2;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.root .goods_tips .goods_collect image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.root .goods_introduce {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.root .goods_introduce text {
+  margin: 20rpx;
+  color: var(--themeColor);
+  font-size: 40rpx;
+}
+.root .goods_introduce rich-text {
+  margin-top: 20rpx;
 }

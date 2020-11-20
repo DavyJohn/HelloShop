@@ -3,12 +3,36 @@
     <!-- 轮播图 -->
     <view class="viewSwiper">
     <swiper class="goodsSwiper" indicator-dots="true" indicator-color="rgba(0,0,0,.3)" autoplay="true">
-      <swiper-item class="goodsItemSwiper" wx:for="{{pics}}"
-      wx:key="pics_id">
+      <swiper-item class="goodsItemSwiper" bindtap='handleSwiper' wx:for="{{pics}}"
+      wx:key="pics_id"
+      data-index= '{{index}}' data-url='{{item.pics_mid_url}}'>
         <navigator class="swiperNavigator" >
         <image mode="widthFix" class="swiperImage" src="{{item.pics_mid_url}}"> </image>
         </navigator>
       </swiper-item>  
     </swiper>
     </view>
+    <!-- //商品价格 -->
+    <view class="goods_price">￥{{goods_price}}</view>
+    <view class="goods_tips">
+        <!-- //商品名称 -->
+        <view class="goods_name" >
+            {{goods_name}}
+        </view>
+    
+        <!-- 商品收藏 -->
+        <view class="goods_collect">
+            <image src="{{collecturl}}" mode="widthFix" />
+            <text >收藏</text>
+        </view>          
+    
+    </view>
+
+    <view class="goods_introduce">
+        <text >图文详情</text>
+        <rich-text nodes="{{goods_introduce}}" ></rich-text>
+    </view>
+   
+   
+  
 </view>

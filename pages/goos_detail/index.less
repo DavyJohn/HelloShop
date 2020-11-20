@@ -1,7 +1,6 @@
 .root{
     .goodsSwiper{
-        height: 70vw;
-        background-color: darkblue;
+        height: 60vw;
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -9,6 +8,49 @@
             image{
               width: 70%;
             }
+        }
+    }
+   
+    .goods_price{
+        color: var(--themeColor);
+        font-size: 40rpx;
+        padding-left: 20rpx;
+        padding-top: 20rpx;
+        padding-bottom: 20rpx;
+    }
+    .goods_tips{
+        
+        flex-direction: row; 
+        display: flex;
+        .goods_name{
+            padding: 5rpx 20rpx;
+            flex: 8;
+            border-right: 2rpx solid darkgray;
+        }
+       
+        .goods_collect{
+            display: flex;
+            flex: 2;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            image{
+                width: 60rpx;
+                height: 60rpx;
+            }
+        }
+    }
+    .goods_introduce{
+        margin-top: 20rpx;
+        margin-bottom: 20rpx;
+        text{
+            margin: 20rpx;
+            color: var(--themeColor);
+            font-size: 40rpx;
+        }
+        rich-text{
+            margin-top: 20rpx;
         }
     }
 }
