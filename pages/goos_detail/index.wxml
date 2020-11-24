@@ -33,6 +33,25 @@
         <rich-text nodes="{{goods_introduce}}" ></rich-text>
     </view>
    
-   
+    <view class="bottom_tools">
+        <view class="contact_customer_service">
+            <image src="{{serviceUrl}}" />
+            <text >联系客服</text>
+        </view>
+        <view class="share">
+            <image src="{{collecturl}}" />
+            <text >分享</text>
+        </view>
+        <view class="cart">
+            <image src="{{cartUrl}}" />
+            <text >购物车</text>
+        </view>
+        <view class="add_cart">
+            <text >加入购物车</text>
+        </view>
+         <view class="now_buy">
+            <text >立即购买</text>
+        </view>
+    </view>
   
 </view>

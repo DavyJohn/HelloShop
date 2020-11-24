@@ -47,3 +47,81 @@
 .root .goods_introduce rich-text {
   margin-top: 20rpx;
 }
+.root .bottom_tools {
+  position: flex;
+  display: flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: white;
+}
+.root .bottom_tools .contact_customer_service {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+}
+.root .bottom_tools .contact_customer_service image {
+  height: 40rpx;
+  width: 40rpx;
+}
+.root .bottom_tools .contact_customer_service text {
+  font-size: 15rpx;
+}
+.root .bottom_tools .share {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+}
+.root .bottom_tools .share image {
+  height: 40rpx;
+  width: 40rpx;
+}
+.root .bottom_tools .share text {
+  font-size: 15rpx;
+}
+.root .bottom_tools .cart {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+}
+.root .bottom_tools .cart image {
+  height: 40rpx;
+  width: 40rpx;
+}
+.root .bottom_tools .cart text {
+  font-size: 15rpx;
+}
+.root .bottom_tools .add_cart {
+  display: flex;
+  align-items: center;
+  background-color: #ffa300;
+  justify-content: center;
+  text-align: center;
+  flex: 3;
+}
+.root .bottom_tools .add_cart text {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.root .bottom_tools .now_buy {
+  display: flex;
+  align-items: center;
+  background-color: #f9544e;
+  justify-content: center;
+  text-align: center;
+  flex: 3;
+}
+.root .bottom_tools .now_buy text {
+  font-size: 30rpx;
+  font-weight: 600;
+}
