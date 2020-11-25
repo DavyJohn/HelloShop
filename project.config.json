@@ -28,6 +28,7 @@
       "disablePlugins": [],
       "outputPath": ""
     },
+    "enableEngineNative": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
@@ -38,7 +39,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.13.0",
   "appid": "wxf0f432e72d62a27a",
-  "projectname": "%E7%8E%A9%E8%BD%AC%E7%94%B5%E5%95%86",
+  "projectname": "HelloShop",
   "debugOptions": {
     "hidedInDevtools": []
   },

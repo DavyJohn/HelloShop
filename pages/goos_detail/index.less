@@ -1,3 +1,6 @@
+page{
+    padding-bottom: 90rpx;
+}
 .root{
     .goodsSwiper{
         height: 60vw;
@@ -55,7 +58,7 @@
         }
     }
     .bottom_tools{
-        position:flex;
+        position: fixed;
         display: flex;
         left: 0;
         bottom: 0;
@@ -69,11 +72,20 @@
             align-items: center;
             background-color: white;
             justify-content: center;
+            position: relative;
+            button{
+                position: absolute;
+                opacity: 0;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+            }
             image{
                 height: 40rpx;
                 width: 40rpx;
             }
-            text{
+            view{
                 font-size: 15rpx;
             }
         }
@@ -84,11 +96,20 @@
             align-items: center;
             background-color: white;
             justify-content: center;
+            position: relative;
+            button{
+                position: absolute;
+                opacity: 0;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+            }
             image{
                 height: 40rpx;
                 width: 40rpx;
             }
-            text{
+            view{
                 font-size: 15rpx;
             }
 
@@ -100,11 +121,20 @@
             align-items: center;
             background-color: white;
             justify-content: center;
+            position: relative;
+            button{
+                position: absolute;
+                opacity: 0;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+            }
             image{
                 height: 40rpx;
                 width: 40rpx;
             }
-            text{
+            view{
                 font-size: 15rpx;
             }
 
@@ -116,10 +146,10 @@
             justify-content: center;
             text-align: center;
             flex: 3;
-            text{
+            view{
                 font-size: 30rpx;
                 font-weight: 600;
-                
+                background-color: transparent;
             }
 
         }
@@ -130,9 +160,10 @@
             justify-content: center;
             text-align: center;
             flex: 3;
-            text{
+            view{
                 font-size: 30rpx;
                 font-weight: 600;
+                background-color: transparent;
             }
         }
     }

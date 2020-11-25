@@ -36,21 +36,23 @@
     <view class="bottom_tools">
         <view class="contact_customer_service">
             <image src="{{serviceUrl}}" />
-            <text >联系客服</text>
+            <view >联系客服</view>
+            <button open-type="contact">1</button>
         </view>
         <view class="share">
             <image src="{{collecturl}}" />
-            <text >分享</text>
+            <view >分享</view>
+            <button open-type="share"></button>
         </view>
         <view class="cart">
             <image src="{{cartUrl}}" />
-            <text >购物车</text>
+            <view >购物车</view>
         </view>
         <view class="add_cart">
-            <text >加入购物车</text>
+            <view >加入购物车</view>
         </view>
          <view class="now_buy">
-            <text >立即购买</text>
+            <view >立即购买</view>
         </view>
     </view>
   

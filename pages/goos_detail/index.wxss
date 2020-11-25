@@ -1,3 +1,6 @@
+page {
+  padding-bottom: 90rpx;
+}
 .root .goodsSwiper {
   height: 60vw;
   text-align: center;
@@ -48,7 +51,7 @@
   margin-top: 20rpx;
 }
 .root .bottom_tools {
-  position: flex;
+  position: fixed;
   display: flex;
   left: 0;
   bottom: 0;
@@ -63,12 +66,21 @@
   align-items: center;
   background-color: white;
   justify-content: center;
+  position: relative;
+}
+.root .bottom_tools .contact_customer_service button {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 .root .bottom_tools .contact_customer_service image {
   height: 40rpx;
   width: 40rpx;
 }
-.root .bottom_tools .contact_customer_service text {
+.root .bottom_tools .contact_customer_service view {
   font-size: 15rpx;
 }
 .root .bottom_tools .share {
@@ -78,12 +90,21 @@
   align-items: center;
   background-color: white;
   justify-content: center;
+  position: relative;
+}
+.root .bottom_tools .share button {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 .root .bottom_tools .share image {
   height: 40rpx;
   width: 40rpx;
 }
-.root .bottom_tools .share text {
+.root .bottom_tools .share view {
   font-size: 15rpx;
 }
 .root .bottom_tools .cart {
@@ -93,12 +114,21 @@
   align-items: center;
   background-color: white;
   justify-content: center;
+  position: relative;
+}
+.root .bottom_tools .cart button {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 .root .bottom_tools .cart image {
   height: 40rpx;
   width: 40rpx;
 }
-.root .bottom_tools .cart text {
+.root .bottom_tools .cart view {
   font-size: 15rpx;
 }
 .root .bottom_tools .add_cart {
@@ -109,9 +139,10 @@
   text-align: center;
   flex: 3;
 }
-.root .bottom_tools .add_cart text {
+.root .bottom_tools .add_cart view {
   font-size: 30rpx;
   font-weight: 600;
+  background-color: transparent;
 }
 .root .bottom_tools .now_buy {
   display: flex;
@@ -121,7 +152,8 @@
   text-align: center;
   flex: 3;
 }
-.root .bottom_tools .now_buy text {
+.root .bottom_tools .now_buy view {
   font-size: 30rpx;
   font-weight: 600;
+  background-color: transparent;
 }
