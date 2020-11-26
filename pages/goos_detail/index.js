@@ -62,7 +62,7 @@ Page({
 
      })
     
-     console.log(this.data.pics)
+     console.log(this.goodDetailData)
    },
    //预览轮播图片
    handleSwiper:function(e){
@@ -73,7 +73,30 @@ Page({
        current: urls[index],
        urls: urls,
      });
+   },
 
+   //添加购物车
+   addCart :function(){
+     //获取缓存购物车信息
+      let cart = wx.getStorageSync('cart')||[]; //就是将它转成一个数组
+      //获取这个里面的数据跟商品信息的数据对比对
+      let index = cart.findIndex(v=>v.goods_id === this.goodDetailData.goods_id);
+      if(index === -1){
+        //不存在 商品 ，需要第一次添加
+        this.goodDetailData.num =1;
+        cart.push(this.goodDetailData)
+      } else{
+        //已经添加了
+        cart[index].num++;
+      }   
+      //将购物车信息添加到缓存中
+      wx.setStorageSync('cart', cart);
+      wx.showToast({
+        title: '添加成功',
+        icon: 'success',
+        duration: 1500,
+        mask: true,
+      });
    },
   /**
    * 生命周期函数--监听页面初次渲染完成

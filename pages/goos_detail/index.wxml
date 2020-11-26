@@ -44,11 +44,11 @@
             <view >分享</view>
             <button open-type="share"></button>
         </view>
-        <view class="cart">
+        <navigator  open-type="switchTab" url="../cart/index" class="cart">
             <image src="{{cartUrl}}" />
             <view >购物车</view>
-        </view>
-        <view class="add_cart">
+        </navigator>
+        <view class="add_cart" bindtap="addCart">
             <view >加入购物车</view>
         </view>
          <view class="now_buy">
