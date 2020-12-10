@@ -1,4 +1,6 @@
 <view>
   <searchinput></searchinput>
-  <text>hello</text>
+  <view class="add_address">
+    <button type="primary" plain="{{true}}">选择收货地址</button>
+  </view>
 </view>
