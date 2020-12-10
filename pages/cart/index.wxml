@@ -1,6 +1,6 @@
 <view>
   <searchinput></searchinput>
   <view class="add_address">
-    <button type="primary" plain="{{true}}">选择收货地址</button>
+    <button type="primary" plain="{{true}}" bindtap="getAddress">选择收货地址</button>
   </view>
 </view>

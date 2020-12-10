@@ -8,6 +8,22 @@ Page({
     
   },
 
+  getAddress(){
+    // wx-wx.getSetting({
+    //   withSubscriptions: true,
+    //   success: (result) => {
+    //     console.log(result)
+    //   },
+    //   fail: (res) => {},
+    //   complete: (res) => {},
+    // })
+    wx.chooseAddress({
+      success: (result)=>{
+        console.log('获取收获地址成功')
+        console.log(result)
+      }
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */

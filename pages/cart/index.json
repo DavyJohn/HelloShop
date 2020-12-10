@@ -1,3 +1,4 @@
 {
-  "usingComponents": {"searchinput":"../../components/searchinput/searchinput"}
+  "usingComponents": {"searchinput":"../../components/searchinput/searchinput"},
+  "navigationBarTitleText": "购物车"
 }
