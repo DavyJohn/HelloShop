@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    myaddress:{},
+    userName:''
     
   },
 
@@ -19,8 +21,11 @@ Page({
     // })
     wx.chooseAddress({
       success: (result)=>{
-        console.log('获取收获地址成功')
-        console.log(result)
+        this.setData({
+          myaddress:result
+        })
+        wx.setStorageSync("myAddress", result);
+     
       }
     });
   },
@@ -28,7 +33,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      const address = wx.getStorageSync("myAddress");
+     
+      if(address === undefined){
+        console.log('当前没有缓存')
+      }else{
+        console.log('当前有缓存')
+        console.log(address)
+        this.setData({
+          myaddress:address,
+          userName:address.userName
+        })
+        
+        console.log('测试一下用户名'+this.data.userName)
+      }
+      
   },
 
   /**

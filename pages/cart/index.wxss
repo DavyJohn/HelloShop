@@ -2,3 +2,16 @@
 .add_address {
   padding: 20rpx;
 }
+.userinfo {
+  padding: 20rpx;
+  display: flex;
+}
+.userinfo .user_info {
+  flex: 3;
+}
+.userinfo .phoneNumber {
+  flex: 1;
+}
+.my_address {
+  padding-left: 20rpx;
+}

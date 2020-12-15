@@ -1,6 +1,16 @@
 <view>
   <searchinput></searchinput>
-  <view class="add_address">
-    <button type="primary" plain="{{true}}" bindtap="getAddress">选择收货地址</button>
+  <view class="add_address" wx:if="{{!userName}}" >
+    <button type="primary" plain="{{true}}" bindtap="getAddress">请选择收获地址</button>
   </view>
+  <view class="userinfo" wx:else>
+    <view class="user_info">
+      收件人{{userName}}
+    </view>
+    <view class="phoneNumber">{{myaddress.telNumber}}</view>
+  </view>
+   <view class="my_address">{{myaddress.provinceName+myaddress.cityName+myaddress.countyName+myaddress.detailInfo}}</view>
+ 
 </view>
+
+
