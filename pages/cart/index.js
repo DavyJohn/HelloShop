@@ -1,4 +1,7 @@
 // pages/cart/index.js
+
+import {chooseAddress,getSetting,openSetting} from "../../utils/syncwx.js"
+import regeneratorRuntime from "../../lib/runtime/runtime";
 Page({
 
   /**
@@ -6,47 +9,33 @@ Page({
    */
   data: {
     myaddress:{},
-    userName:''
+    userName:'',
+    cartList:[]
     
   },
-
-  getAddress(){
-    // wx-wx.getSetting({
-    //   withSubscriptions: true,
-    //   success: (result) => {
-    //     console.log(result)
-    //   },
-    //   fail: (res) => {},
-    //   complete: (res) => {},
-    // })
-    wx.chooseAddress({
-      success: (result)=>{
-        this.setData({
-          myaddress:result
-        })
-        wx.setStorageSync("myAddress", result);
-     
-      }
-    });
+  //点击收货地址
+  async getAddress(){
+    const res1 = await getSetting();
+    console.log(res1)
+    const scopeAddress = res1.authSetting['scope.address'];
+    console.log(scopeAddress)
+    if(scopeAddress === false  ){
+      console.log('诱导用户进入设置')
+      await openSetting();
+    }
+    const myaddress = await chooseAddress();
+    this.setData({
+      myaddress:myaddress
+    })
+    console.log('执行缓存处理')
+    wx.setStorageSync("myAddress", this.data.myaddress);
+  
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      const address = wx.getStorageSync("myAddress");
-     
-      if(address === undefined){
-        console.log('当前没有缓存')
-      }else{
-        console.log('当前有缓存')
-        console.log(address)
-        this.setData({
-          myaddress:address,
-          userName:address.userName
-        })
-        
-        console.log('测试一下用户名'+this.data.userName)
-      }
+    console.log('onLoad')
       
   },
 
@@ -61,7 +50,28 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log('onShow')
+    const address = wx.getStorageSync("myAddress");
+    console.log('收到缓存信息为：'+address)
+    if(address === undefined){
+      console.log('当前没有缓存')
+    }else{
+      console.log('当前有缓存')
+      console.log(address)
+      this.setData({
+        myaddress:address,
+        userName:address.userName
+      })
+      
+      console.log('测试一下用户名'+this.data.userName)
+    }
+    //获取购物车本地缓存的数据 
+    const cartList = wx.getStorageSync("cart");
+    if(cartList !== undefined){
+      this.setData({
+        cartList:cartList
+      })
+    }
   },
 
   /**

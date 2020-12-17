@@ -15,4 +15,82 @@
 }
 .my_address{
     padding-left: 20rpx;
+    padding-bottom: 20rpx;
+   
+}
+.cart_content{
+    
+    .cart_title{
+        padding: 20rpx;
+        font-size: 36rpx;
+        border-bottom: 1rpx solid red;
+        border-top: 1rpx solid red;
+    }
+    .cart_list{
+        height: 250rpx;
+        padding:10rpx 20rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1rpx solid #000;
+        .view_check{
+            flex: 1;
+        }
+        .view_goods_image{
+            flex: 3;
+            image{
+                width: 80%;
+            }
+           
+        }
+        .goods_content{
+            justify-content: space-around;
+            height: 100%;
+            flex: 5;
+            .view_goods_title{
+                padding-top: 30rpx; 
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient:vertical ;
+                -webkit-line-clamp: 2;
+                font-size: 26rpx;
+                color: #000;
+            }
+            .view_goods_tips{
+                padding-top: 40rpx;
+                display: flex;
+                justify-content: space-between;
+                .goods_price{
+                    color: red;
+                    font-size: 26rpx;
+                }
+                .view_goods_num{
+                    padding-top: 20rpx;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 120rpx;
+                    height: 40rpx;
+                .add{
+                    flex: 1;
+                    text-align: center;
+                    border: 1rpx solid #ccc;
+                    }
+                .goods_num{
+                    flex: 1;
+                    text-align: center;
+                    }
+                .reduce{
+                    flex: 1;
+                    text-align: center;
+                    border: 1rpx solid #ccc;
+                    }
+            }
+           
+          
+        }
+      
+        }
+
+    }
 }

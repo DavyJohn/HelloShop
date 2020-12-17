@@ -1,6 +1,6 @@
 <view>
   <searchinput></searchinput>
-  <view class="add_address" wx:if="{{!userName}}" >
+  <view class="add_address" wx:if="{{!userName}}">
     <button type="primary" plain="{{true}}" bindtap="getAddress">请选择收获地址</button>
   </view>
   <view class="userinfo" wx:else>
@@ -9,8 +9,41 @@
     </view>
     <view class="phoneNumber">{{myaddress.telNumber}}</view>
   </view>
-   <view class="my_address">{{myaddress.provinceName+myaddress.cityName+myaddress.countyName+myaddress.detailInfo}}</view>
- 
+   <view class="my_address" wx:if="{{userName}}">{{myaddress.provinceName+myaddress.cityName+myaddress.countyName+myaddress.detailInfo}}</view>
+  <view class="cart_content">
+    <view class="cart_title"> 购物车</view>
+    <view class="cart_list" wx:for="{{cartList}}" wx:for-item="cartItem"
+    wx:key="goods_id">
+      <!-- //复选框 -->
+      <view class="view_check">
+        <checkbox-group >
+          <checkbox  />
+        </checkbox-group>
+      </view>
+  <!-- 商品图片 -->
+      <navigator class="view_goods_image">
+        <image mode="widthFix" src="{{cartItem.goods_big_logo}}" />
+      </navigator>
+  <!-- 商品内容 -->
+      <view class="goods_content">
+        <view class="view_goods_title">
+       {{cartItem.goods_name}}
+        </view>
+        <view class="view_goods_tips">
+          <view class="goods_price">￥{{cartItem.goods_price}}</view>
+  <!-- 商品个数加减 -->
+        <view class="view_goods_num">
+          <view class="add" >+</view>
+          <view class="goods_num">{{cartItem.num}}</view>
+          <view class="reduce">-</view>
+        </view>
+        </view>
+      </view>
+        
+     
+    </view>
+  </view>
+    
 </view>
 
 
