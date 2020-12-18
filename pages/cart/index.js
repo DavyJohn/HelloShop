@@ -10,7 +10,10 @@ Page({
   data: {
     myaddress:{},
     userName:'',
-    cartList:[]
+    cartList:[],
+    allNum:0,
+    allPrice:0,
+    allCheck:true
     
   },
   //点击收货地址
@@ -50,6 +53,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    
+    this.data.allNum =0,
+    this.data.allPrice = 0;
     console.log('onShow')
     const address = wx.getStorageSync("myAddress");
     console.log('收到缓存信息为：'+address)
@@ -65,13 +71,25 @@ Page({
       
       console.log('测试一下用户名'+this.data.userName)
     }
-    //获取购物车本地缓存的数据 
-    const cartList = wx.getStorageSync("cart");
+    //获取购物车本地缓存的数据 ,如果 不存在这个cartList  那么就默认为一个空的数组
+    const cartList = wx.getStorageSync("cart")||[];
     if(cartList !== undefined){
       this.setData({
         cartList:cartList
       })
+   
     }
+  },
+  /**
+   * 列表中checkbox点击
+   */
+  changeItem(e){
+    const  cartList = this.data;
+    const goods_id = e.currentTarget.dataset.id;
+ //底部工具栏中check的状态默认是全部选中，如果 其中一个商品的checked的状态为false那么全部选中的状态就为false
+    const index = cartList.findIndex(v.goods_id === goods_id);//返商品id相同 的下标
+    
+
   },
 
   /**

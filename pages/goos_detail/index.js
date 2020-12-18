@@ -82,8 +82,10 @@ Page({
       //获取这个里面的数据跟商品信息的数据对比对
       let index = cart.findIndex(v=>v.goods_id === this.goodDetailData.goods_id);
       if(index === -1){
-        //不存在 商品 ，需要第一次添加
+        //不存在 商品 ，需要第一次添加一个新的属性
         this.goodDetailData.num =1;
+        //由于在购物车那边需要一个点击的属性 要是没有我们也需要第一次添加,选中就是默认状态
+        this.goodDetailData.checked = true
         cart.push(this.goodDetailData)
       } else{
         //已经添加了

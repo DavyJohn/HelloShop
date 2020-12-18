@@ -1,4 +1,7 @@
 /* pages/cart/index.wxss */
+page {
+  padding-bottom: 90rpx;
+}
 .add_address {
   padding: 20rpx;
 }
@@ -83,4 +86,34 @@
   flex: 1;
   text-align: center;
   border: 1rpx solid #ccc;
+}
+.footer_tool {
+  border-top: 1rpx solid var(--themeColor);
+  padding-left: 20rpx ;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 92rpx;
+  background-color: #fff;
+  display: flex;
+}
+.footer_tool .check {
+  flex: 2;
+}
+.footer_tool .all_price {
+  flex: 3;
+  text-align: right;
+}
+.footer_tool .all_price .all_price_sett {
+  display: flex;
+}
+.footer_tool .all_price .goods_all_price {
+  color: var(--themeColor);
+}
+.footer_tool .btn_goods_all_price {
+  flex: 3;
+  background-color: var(--themeColor);
 }
